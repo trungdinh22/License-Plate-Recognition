@@ -17,7 +17,7 @@ def rotate_image(image, angle):
     result = cv2.warpAffine(image, rot_mat, image.shape[1::-1], flags=cv2.INTER_LINEAR)
     return result
 
-def compute_skew(src_img):
+def compute_skew(src_img, center_thres):
     if len(src_img.shape) == 3:
         h, w, _ = src_img.shape
     elif len(src_img.shape) == 2:
@@ -35,8 +35,9 @@ def compute_skew(src_img):
     for i in range (len(lines)):
         for x1, y1, x2, y2 in lines[i]:
             center_point = [((x1+x2)/2), ((y1+y2)/2)]
-            if center_point[1] < 7:
-                continue
+            if center_thres == 1:
+                if center_point[1] < 7:
+                    continue
             if center_point[1] < min_line:
                 min_line = center_point[1]
                 min_line_pos = i
@@ -53,7 +54,9 @@ def compute_skew(src_img):
         return 0.0
     return (angle / cnt)*180/math.pi
 
-def deskew(src_img):
-    return rotate_image(src_img, compute_skew(changeContrast(src_img)))
-    # return rotate_image(src_img, compute_skew(src_img))
+def deskew(src_img, change_cons, center_thres):
+    if change_cons == 1:
+        return rotate_image(src_img, compute_skew(changeContrast(src_img), center_thres))
+    else:
+        return rotate_image(src_img, compute_skew(src_img, center_thres))
 
