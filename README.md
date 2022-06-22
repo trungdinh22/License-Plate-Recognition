@@ -22,8 +22,8 @@ This repository provides you with a detailed guide on how to training and build 
 
 This repo uses 2 sets of data for 2 stage of license plate recognition problem:
 
-- [License Plate Detection Dataset](https://drive.google.com/drive/folders/115k1rQMx-BYqnZx6uGKXL_0hBLtqaRyh?usp=sharing)
-- [Character Detection Dataset](https://drive.google.com/drive/folders/1auj1aPoU_fthl6UXyp-Bziv-27-kDae6?usp=sharing)
+- [License Plate Detection Dataset](https://drive.google.com/file/d/1xchPXf7a1r466ngow_W_9bittRqQEf_T/view?usp=sharing)
+- [Character Detection Dataset](https://drive.google.com/file/d/1bPux9J0e1mz-_Jssx4XX1-wPGamaS8mI/view?usp=sharing)
 
 ## Training
 
