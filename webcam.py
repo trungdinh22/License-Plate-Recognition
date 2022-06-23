@@ -73,9 +73,10 @@ def read_plate():
     return license_plate
 
 vid = cv2.VideoCapture(1)
+# vid = cv2.VideoCapture("1.mp4")
 while(True):
     ret, frame = vid.read()
-    cv2.imshow('frame', frame)
+    
     plates = yolo_LP_detect(frame, size=640)
     list_plates = plates.pandas().xyxy[0].values.tolist()
     list_read_plates = set()
@@ -86,6 +87,7 @@ while(True):
             list_read_plates.add(lp)
     else:
         for plate in list_plates:
+            cv2.rectangle(frame, (int(plate[0]), int(plate[1])),(int(plate[2]), int(plate[3])), (255,0,0), 2)
             flag = 0
             x = int(plate[0]) # xmin
             y = int(plate[1]) # ymin
@@ -101,11 +103,13 @@ while(True):
                     lp = read_plate()
                     if lp != "unknown":
                         list_read_plates.add(lp)
+                        cv2.putText(frame, lp, (int(plate[0]), int(plate[1]-10)), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
                         flag = 1
                         break
                 if flag == 1:
                     break
-    print(list_read_plates)
+    cv2.imshow('frame', frame)
+    # print(list_read_plates)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
