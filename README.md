@@ -2,7 +2,7 @@
 
 This repository provides you with a detailed guide on how to training and build a Vietnamese License Plate detection and recognition system. This system can work on 2 types of license plate in Vietnam, 1 line plates and 2 lines plates.
 
-## Installation & Run Demo
+## Installation
 
 ```bash
   git clone https://github.com/Marsmallotr/License-Plate-Recognition.git
@@ -10,13 +10,28 @@ This repository provides you with a detailed guide on how to training and build 
   pip install -r ./requirement.txt
 ```
 
-- Trained model provided in ./model folder in this repo 
+- **Pretrained model** provided in ./model folder in this repo 
 
 - **Download yolov5 (old version) from this link:** [yolov5 - google drive](https://drive.google.com/file/d/1S_-GbVr24EYcRI9p4b24sVrDmnjX35l4/view?usp=sharing)
 
 - Copy yolov5 folder to project folder
 
-- Run step by step in LP_recognition.ipynb
+## Run License Plate Recognition
+
+```bash
+  # run inference on webcam (15-20fps if there is 1 license plate in scene)
+  python webcam.py 
+
+  # run inference on image
+  python lp_image.py -i test_image/3.jpg
+
+  # run LP_recognition.ipynb if you want to know how model work in each step
+```
+
+![Demo 1](result/1.jpg)
+![Demo 2](result/2.jpg)
+![Demo 3](result/3.jpg)
+![Vid](result/video.gif)
 
 ## Vietnamese Plate Dataset
 
