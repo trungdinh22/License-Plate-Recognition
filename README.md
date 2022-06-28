@@ -28,9 +28,8 @@ This repository provides you with a detailed guide on how to training and build 
   # run LP_recognition.ipynb if you want to know how model work in each step
 ```
 
-![Demo 1](result/1.jpg)
-![Demo 2](result/2.jpg)
-![Demo 3](result/3.jpg)
+![Demo 1](result/image.jpg)
+
 ![Vid](result/video.gif)
 
 ## Vietnamese Plate Dataset
