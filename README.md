@@ -28,6 +28,7 @@ This repository provides you with a detailed guide on how to training and build 
   # run LP_recognition.ipynb if you want to know how model work in each step
 ```
 
+## Result
 ![Demo 1](result/image.jpg)
 
 ![Vid](result/video.gif)
