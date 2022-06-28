@@ -51,6 +51,5 @@ else:
             if flag == 1:
                 break
 cv2.imshow('frame', img)
-cv2.imwrite("2.jpg", img)
 cv2.waitKey()
 cv2.destroyAllWindows()
