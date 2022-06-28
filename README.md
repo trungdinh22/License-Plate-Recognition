@@ -7,6 +7,8 @@ This repository provides you with a detailed guide on how to training and build 
 ```bash
   git clone https://github.com/Marsmallotr/License-Plate-Recognition.git
   cd License-Plate-Recognition
+
+  # install dependencies using pip 
   pip install -r ./requirement.txt
 ```
 
@@ -31,7 +33,7 @@ This repository provides you with a detailed guide on how to training and build 
 ## Result
 ![Demo 1](result/image.jpg)
 
-![Vid](result/video.gif)
+![Vid](result/video1.gif)
 
 ## Vietnamese Plate Dataset
 

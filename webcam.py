@@ -2,12 +2,12 @@ from PIL import Image
 import cv2
 import torch
 import math 
-import utils_rotate
+import function.utils_rotate as utils_rotate
 from IPython.display import display
 import os
 import time
 import argparse
-import helper
+import function.helper as helper
 
 # load model
 yolo_LP_detect = torch.hub.load('yolov5', 'custom', path='model/LP_detector_nano_61.pt', force_reload=True, source='local')

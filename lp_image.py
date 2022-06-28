@@ -2,12 +2,12 @@ from PIL import Image
 import cv2
 import torch
 import math 
-import utils_rotate
+import function.utils_rotate as utils_rotate
 from IPython.display import display
 import os
 import time
 import argparse
-import helper
+import function.helper as helper
 
 ap = argparse.ArgumentParser()
 ap.add_argument('-i', '--image', required=True, help='path to input image')
