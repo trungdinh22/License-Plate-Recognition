@@ -14,7 +14,7 @@ This repository provides you with a detailed guide on how to training and build 
 
 - **Pretrained model** provided in ./model folder in this repo 
 
-- **Download yolov5 (old version) from this link:** [yolov5 - google drive](https://drive.google.com/file/d/1S_-GbVr24EYcRI9p4b24sVrDmnjX35l4/view?usp=sharing)
+- **Download yolov5 (old version) from this link:** [yolov5 - google drive](https://drive.google.com/file/d/1g1u7M4NmWDsMGOppHocgBKjbwtDA-uIu/view?usp=sharing)
 
 - Copy yolov5 folder to project folder
 
